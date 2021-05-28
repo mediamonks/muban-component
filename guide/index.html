@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting started | Muban</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Writing components for server-rendered HTML">
+    
+    <link rel="preload" href="/muban/assets/css/0.styles.c2e1c844.css" as="style"><link rel="preload" href="/muban/assets/js/app.38f7e87e.js" as="script"><link rel="preload" href="/muban/assets/js/2.06b0796c.js" as="script"><link rel="preload" href="/muban/assets/js/18.68ff74e2.js" as="script"><link rel="preload" href="/muban/assets/js/5.05f07280.js" as="script"><link rel="prefetch" href="/muban/assets/js/10.d14ed3da.js"><link rel="prefetch" href="/muban/assets/js/11.8c7bde9f.js"><link rel="prefetch" href="/muban/assets/js/12.61d44a32.js"><link rel="prefetch" href="/muban/assets/js/13.8dd5cf62.js"><link rel="prefetch" href="/muban/assets/js/14.d537f9b0.js"><link rel="prefetch" href="/muban/assets/js/15.3a8681eb.js"><link rel="prefetch" href="/muban/assets/js/16.b9200e8e.js"><link rel="prefetch" href="/muban/assets/js/17.1d86e250.js"><link rel="prefetch" href="/muban/assets/js/19.b096606a.js"><link rel="prefetch" href="/muban/assets/js/20.cf32d357.js"><link rel="prefetch" href="/muban/assets/js/21.f0e8db43.js"><link rel="prefetch" href="/muban/assets/js/22.ed59f86b.js"><link rel="prefetch" href="/muban/assets/js/23.a30f80b7.js"><link rel="prefetch" href="/muban/assets/js/24.a03bc3dc.js"><link rel="prefetch" href="/muban/assets/js/25.0c065775.js"><link rel="prefetch" href="/muban/assets/js/26.87f27203.js"><link rel="prefetch" href="/muban/assets/js/27.96e8a80c.js"><link rel="prefetch" href="/muban/assets/js/28.2639b294.js"><link rel="prefetch" href="/muban/assets/js/29.dff7791a.js"><link rel="prefetch" href="/muban/assets/js/3.deed82c5.js"><link rel="prefetch" href="/muban/assets/js/30.373e9c86.js"><link rel="prefetch" href="/muban/assets/js/31.33ef1212.js"><link rel="prefetch" href="/muban/assets/js/4.f26baa3d.js"><link rel="prefetch" href="/muban/assets/js/6.b1f6c096.js"><link rel="prefetch" href="/muban/assets/js/7.c1317075.js"><link rel="prefetch" href="/muban/assets/js/8.9814c2a1.js"><link rel="prefetch" href="/muban/assets/js/9.242aa778.js">
+    <link rel="stylesheet" href="/muban/assets/css/0.styles.c2e1c844.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/muban/" class="home-link router-link-active"><!----> <span class="site-name">Muban</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/muban/guide/" aria-current="page" class="active sidebar-link">Getting started</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/muban/guide/#installing" class="sidebar-link">Installing</a></li><li class="sidebar-sub-header"><a href="/muban/guide/#simple-component" class="sidebar-link">Simple component</a></li><li class="sidebar-sub-header"><a href="/muban/guide/#dev-template" class="sidebar-link">Dev template</a></li><li class="sidebar-sub-header"><a href="/muban/guide/#using-storybook" class="sidebar-link">Using Storybook</a></li></ul></li><li><a href="/muban/guide/app.html" class="sidebar-link">App</a></li><li><a href="/muban/guide/component.html" class="sidebar-link">Component setup</a></li><li><a href="/muban/guide/props.html" class="sidebar-link">Props</a></li><li><a href="/muban/guide/reactivity.html" class="sidebar-link">Reactivity</a></li><li><a href="/muban/guide/bindings.html" class="sidebar-link">Bindings</a></li><li><a href="/muban/guide/template.html" class="sidebar-link">Template</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="getting-started"><a href="#getting-started" class="header-anchor">#</a> Getting started</h1> <h2 id="installing"><a href="#installing" class="header-anchor">#</a> Installing</h2> <p>Add <code>muban</code> to your project:</p> <!----> <h2 id="simple-component"><a href="#simple-component" class="header-anchor">#</a> Simple component</h2> <p>Create your component:</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent<span class="token punctuation">,</span> bind<span class="token punctuation">,</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@muban/muban'</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">const</span> MyComponent <span class="token operator">=</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">{</span> props<span class="token punctuation">,</span> refs <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">'Hello World'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>
+      <span class="token function">bind</span><span class="token punctuation">(</span>refs<span class="token punctuation">.</span>self<span class="token punctuation">,</span> <span class="token punctuation">{</span> text<span class="token operator">:</span> content<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Make sure to have the following HTML on the page:</p> <div class="language-html extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br></div><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Hello<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>Then init your component:</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@muban/muban'</span><span class="token punctuation">;</span>
+
+<span class="token function">createApp</span><span class="token punctuation">(</span>MyComponent<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+</code></pre></div><p>Your page should now display <code>Hello World</code> if your component is correctly running.</p> <h2 id="dev-template"><a href="#dev-template" class="header-anchor">#</a> Dev template</h2> <p>Create our template:</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> html <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@muban/template'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">type</span> <span class="token class-name">MyComponentProps</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  welcomeText<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">myComponentTemplate</span><span class="token punctuation">(</span><span class="token punctuation">{</span> welcomeText <span class="token punctuation">}</span><span class="token operator">:</span> MyComponentProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div data-component=&quot;my-component&quot;&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>welcomeText<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/div&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Make sure to have the following HTML on the page:</p> <div class="language-html extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br></div><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Hello<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>Render your template:</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@muban/muban'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> appRoot <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span>MyComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span>appRoot<span class="token punctuation">,</span> myComponentTemplate<span class="token punctuation">,</span> <span class="token punctuation">{</span> welcomeText<span class="token operator">:</span> <span class="token string">'Hello'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="using-storybook"><a href="#using-storybook" class="header-anchor">#</a> Using Storybook</h2> <p>Add <code>@muban/storybook</code> to your project:</p> <!----> <p>Add these two scripts in your <code>package.json</code></p> <div class="language-json extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br></div><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;storybook&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start-storybook -p 6006&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build-storybook&quot;</span><span class="token operator">:</span> <span class="token string">&quot;build-storybook -o ./dist/storybook&quot;</span>  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Create your <code>.storybook/main.js</code> with this content:</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  stories<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'../src/**/*.stories.mdx'</span><span class="token punctuation">,</span>
+    <span class="token string">'../src/**/*.stories.@(js|ts)'</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  addons<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'@storybook/addon-essentials'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Create your story file:</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> Story <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@muban/storybook'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">'MyComponent'</span><span class="token punctuation">,</span>
+  argTypes<span class="token operator">:</span> <span class="token punctuation">{</span>
+    welcomeText<span class="token operator">:</span> <span class="token punctuation">{</span> control<span class="token operator">:</span> <span class="token string">'text'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> Default<span class="token operator">:</span> Story<span class="token operator">&lt;</span>MyComponentProps<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  template<span class="token operator">:</span> myComponentTemplate<span class="token punctuation">,</span>
+  component<span class="token operator">:</span> MyComponent<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Default<span class="token punctuation">.</span>args <span class="token operator">=</span> <span class="token punctuation">{</span>
+  welcomeText<span class="token operator">:</span> <span class="token string">'Hello'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Run storybook:</p> <!----></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/muban/guide/app.html">
+        App
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/muban/assets/js/app.38f7e87e.js" defer></script><script src="/muban/assets/js/2.06b0796c.js" defer></script><script src="/muban/assets/js/18.68ff74e2.js" defer></script><script src="/muban/assets/js/5.05f07280.js" defer></script>
+  </body>
+</html>

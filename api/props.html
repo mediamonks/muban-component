@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Props | Muban</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Writing components for server-rendered HTML">
+    
+    <link rel="preload" href="/muban/assets/css/0.styles.c2e1c844.css" as="style"><link rel="preload" href="/muban/assets/js/app.38f7e87e.js" as="script"><link rel="preload" href="/muban/assets/js/2.06b0796c.js" as="script"><link rel="preload" href="/muban/assets/js/14.d537f9b0.js" as="script"><link rel="prefetch" href="/muban/assets/js/10.d14ed3da.js"><link rel="prefetch" href="/muban/assets/js/11.8c7bde9f.js"><link rel="prefetch" href="/muban/assets/js/12.61d44a32.js"><link rel="prefetch" href="/muban/assets/js/13.8dd5cf62.js"><link rel="prefetch" href="/muban/assets/js/15.3a8681eb.js"><link rel="prefetch" href="/muban/assets/js/16.b9200e8e.js"><link rel="prefetch" href="/muban/assets/js/17.1d86e250.js"><link rel="prefetch" href="/muban/assets/js/18.68ff74e2.js"><link rel="prefetch" href="/muban/assets/js/19.b096606a.js"><link rel="prefetch" href="/muban/assets/js/20.cf32d357.js"><link rel="prefetch" href="/muban/assets/js/21.f0e8db43.js"><link rel="prefetch" href="/muban/assets/js/22.ed59f86b.js"><link rel="prefetch" href="/muban/assets/js/23.a30f80b7.js"><link rel="prefetch" href="/muban/assets/js/24.a03bc3dc.js"><link rel="prefetch" href="/muban/assets/js/25.0c065775.js"><link rel="prefetch" href="/muban/assets/js/26.87f27203.js"><link rel="prefetch" href="/muban/assets/js/27.96e8a80c.js"><link rel="prefetch" href="/muban/assets/js/28.2639b294.js"><link rel="prefetch" href="/muban/assets/js/29.dff7791a.js"><link rel="prefetch" href="/muban/assets/js/3.deed82c5.js"><link rel="prefetch" href="/muban/assets/js/30.373e9c86.js"><link rel="prefetch" href="/muban/assets/js/31.33ef1212.js"><link rel="prefetch" href="/muban/assets/js/4.f26baa3d.js"><link rel="prefetch" href="/muban/assets/js/5.05f07280.js"><link rel="prefetch" href="/muban/assets/js/6.b1f6c096.js"><link rel="prefetch" href="/muban/assets/js/7.c1317075.js"><link rel="prefetch" href="/muban/assets/js/8.9814c2a1.js"><link rel="prefetch" href="/muban/assets/js/9.242aa778.js">
+    <link rel="stylesheet" href="/muban/assets/css/0.styles.c2e1c844.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/muban/" class="home-link router-link-active"><!----> <span class="site-name">Muban</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link router-link-active">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link router-link-active">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/muban/api/" aria-current="page" class="sidebar-link">Api</a></li><li><a href="/muban/api/app.html" class="sidebar-link">App</a></li><li><a href="/muban/api/component.html" class="sidebar-link">Component</a></li><li><a href="/muban/api/props.html" aria-current="page" class="active sidebar-link">Props</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/muban/api/props.html#proptype" class="sidebar-link">propType</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/muban/api/props.html#type" class="sidebar-link">type</a></li><li class="sidebar-sub-header"><a href="/muban/api/props.html#optional" class="sidebar-link">optional</a></li><li class="sidebar-sub-header"><a href="/muban/api/props.html#defaultvalue" class="sidebar-link">defaultValue</a></li><li class="sidebar-sub-header"><a href="/muban/api/props.html#validate" class="sidebar-link">validate</a></li><li class="sidebar-sub-header"><a href="/muban/api/props.html#shape" class="sidebar-link">shape</a></li><li class="sidebar-sub-header"><a href="/muban/api/props.html#source" class="sidebar-link">source</a></li></ul></li></ul></li><li><a href="/muban/api/refs.html" class="sidebar-link">Refs</a></li><li><a href="/muban/api/bindings.html" class="sidebar-link">Bindings</a></li><li><a href="/muban/api/hooks.html" class="sidebar-link">Hooks</a></li><li><a href="/muban/api/provide-inject.html" class="sidebar-link">Provide / Inject</a></li><li><a href="/muban/api/mhtml.html" class="sidebar-link">mhtml templates</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="props"><a href="#props" class="header-anchor">#</a> Props</h1> <div class="custom-block tip"><p class="custom-block-title">Guide</p> <p>Perhaps the <a href="/muban/guide/props.html">props Guide</a> is also useful to you.</p></div> <h2 id="proptype"><a href="#proptype" class="header-anchor">#</a> propType</h2> <p>This object is what's created by the <code>propType</code> helpers and passed to your component for each
+prop you define. Besides the information in here, props are also typed based on this object, and
+the helpers make sure that the <code>type</code> matches up with the <code>deafult</code> and <code>validator</code>. Together
+with that, the <code>optional</code> and <code>validator</code> can make type <code>| undefined</code>.</p> <p>The <code>PropType</code> is the type of the <code>propType</code> helper functions that you can use for your
+component props, and it exposes an initial <code>type</code> (e.g. <code>string</code> or <code>func</code>) for you to work with.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">PropTypeDefinition<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token operator">=</span> <span class="token builtin">any</span><span class="token operator">&gt;</span></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span>
+    <span class="token operator">|</span> <span class="token keyword">typeof</span> Number
+    <span class="token operator">|</span> <span class="token keyword">typeof</span> String
+    <span class="token operator">|</span> <span class="token keyword">typeof</span> Boolean
+    <span class="token operator">|</span> <span class="token keyword">typeof</span> Date
+    <span class="token operator">|</span> <span class="token keyword">typeof</span> <span class="token builtin">Array</span>
+    <span class="token operator">|</span> <span class="token keyword">typeof</span> Object
+    <span class="token operator">|</span> <span class="token keyword">typeof</span> <span class="token builtin">Function</span><span class="token punctuation">;</span>
+  <span class="token keyword">default</span><span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">Primitive</span> <span class="token operator">?</span> <span class="token function-variable function">T</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+  validator<span class="token operator">?</span><span class="token operator">:</span> Predicate<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  isOptional<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  missingValue<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  <span class="token comment">// eslint-disable-next-line @typescript-eslint/ban-types</span>
+  shapeType<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">Function</span><span class="token punctuation">;</span>
+  sourceOptions<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    target<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    <span class="token keyword">type</span><span class="token operator">?</span><span class="token operator">:</span> <span class="token string">'data'</span> <span class="token operator">|</span> <span class="token string">'json'</span> <span class="token operator">|</span> <span class="token string">'attr'</span> <span class="token operator">|</span> <span class="token string">'css'</span> <span class="token operator">|</span> <span class="token string">'text'</span> <span class="token operator">|</span> <span class="token string">'html'</span><span class="token punctuation">;</span>
+    name<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    options<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      cssPredicate<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">type</span> <span class="token class-name">PropType</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span><span class="token operator">:</span> PropTypeDefinition<span class="token punctuation">;</span>
+  <span class="token builtin">number</span><span class="token operator">:</span> PropTypeDefinition<span class="token punctuation">;</span>
+  <span class="token builtin">boolean</span><span class="token operator">:</span> PropTypeDefinition<span class="token punctuation">;</span>
+  object<span class="token operator">:</span> PropTypeDefinition<span class="token punctuation">;</span>
+  array<span class="token operator">:</span> PropTypeDefinition<span class="token punctuation">;</span>
+  date<span class="token operator">:</span> PropTypeDefinition<span class="token punctuation">;</span>
+  func<span class="token operator">:</span> PropTypeDefinition<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>THis is how you can use it in your component:</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> propType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@muban/muban'</span><span class="token punctuation">;</span>
+
+<span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    foo<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="type"><a href="#type" class="header-anchor">#</a> type</h3> <p>The objects below highlight what properties or functions you can call on each <code>propType</code> object.
+Setting or calling them will result in setting one of the keys from the <code>PropTypeDefinition</code> above.</p> <p>All of them offer the same helpers, except <code>func</code> since that one can only be passed from parent
+components. The only difference between the others is how they are typed.</p> <div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+  optional<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">defaultValue</span><span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">validate</span><span class="token punctuation">(</span>predicate<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  sourceOptions<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span>
+  optional<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">defaultValue</span><span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">validate</span><span class="token punctuation">(</span>predicate<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  sourceOptions<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span><span class="token builtin">boolean</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> Boolean<span class="token punctuation">,</span>
+  optional<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">defaultValue</span><span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">validate</span><span class="token punctuation">(</span>predicate<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  sourceOptions<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> Object<span class="token punctuation">,</span>
+  optional<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">defaultValue</span><span class="token punctuation">(</span>value<span class="token operator">:</span> Object<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">validate</span><span class="token punctuation">(</span>predicate<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span>Object<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  sourceOptions<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span>array<span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> <span class="token builtin">Array</span><span class="token punctuation">,</span>
+  optional<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">defaultValue</span><span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">Array</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">validate</span><span class="token punctuation">(</span>predicate<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span><span class="token builtin">Array</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  sourceOptions<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span>date<span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> Date<span class="token punctuation">,</span>
+  optional<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">defaultValue</span><span class="token punctuation">(</span>value<span class="token operator">:</span> Date<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">validate</span><span class="token punctuation">(</span>predicate<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span>Date<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  sourceOptions<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span>func<span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> <span class="token builtin">Function</span><span class="token punctuation">,</span>
+  optional<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token generic-function"><span class="token function">shape</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><h3 id="optional"><a href="#optional" class="header-anchor">#</a> optional</h3> <p>When using <code>optional</code>, you mark the <code>PropTypeDefinition</code> object as optional (you don't have to
+pass a value), and also indicates that the value (when the prop is resolve) is missing.</p> <div class="language-ts extra-class"><pre class="language-ts"><code>optional<span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token operator">...</span>obj<span class="token punctuation">,</span>
+  isOptional<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  missingValue<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span>optional<span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">Guide</p> <p>Read more on the <a href="/muban/guide/props.html#optional">optional Guide</a> page.</p></div> <h3 id="defaultvalue"><a href="#defaultvalue" class="header-anchor">#</a> defaultValue</h3> <p>When using <code>defaultValue</code>, you set this default value on the <code>PropTypeDefinition</code> while also
+marking it as <code>optional</code> (you don't have to pass a value), but since you have a <code>default</code> set,
+it will never be missing a value (when resolved).</p> <p>The passed <code>defaultValue</code> must match the type of <code>propType</code> you're working with.</p> <div class="language-ts extra-class"><pre class="language-ts"><code>defaultValue<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">U</span> <span class="token keyword">extends</span> <span class="token class-name">ConstructorType<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token punctuation">[</span><span class="token string">'type'</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span> <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>
+  value<span class="token operator">:</span> <span class="token constant">U</span> <span class="token keyword">extends</span> <span class="token class-name">Primitive</span> <span class="token operator">?</span> <span class="token function-variable function">U</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">U</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token operator">...</span>obj<span class="token punctuation">,</span>
+  isOptional<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token operator">:</span> value<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">defaultValue</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">Guide</p> <p>Read more on the <a href="/muban/guide/props.html#defaultvalue">defaultValue Guide</a> page.</p></div> <h3 id="validate"><a href="#validate" class="header-anchor">#</a> validate</h3> <p>When using the <code>validate</code>, you have to pass a <code>Predicate</code> function that gets checked after
+converting the extracted value to the right type, or when passing a value from the parent
+component. If the predicate fails (returns false), an error will be thrown.</p> <p>Furthermore, the predicate is also used to set a stricter type from the default <code>string</code> or
+<code>Object</code>, so you can make it a string literal or a union thereof, or define a complex object shape.</p> <div class="language-ts extra-class"><pre class="language-ts"><code>validate<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">U</span> <span class="token keyword">extends</span> <span class="token class-name">ConstructorType<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token punctuation">[</span><span class="token string">'type'</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span> <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>predicate<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span><span class="token constant">U</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">{</span>
+  <span class="token operator">...</span>obj<span class="token punctuation">,</span>
+  validator<span class="token operator">:</span> predicate<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">export</span> <span class="token keyword">const</span> isPositive<span class="token operator">:</span> Predicate<span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span><span class="token operator">:</span> value <span class="token keyword">is</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span>
+  <span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'number'</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token number">Infinity</span> <span class="token operator">/</span> value <span class="token operator">:</span> value<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span>
+
+<span class="token comment">// value validation</span>
+propType<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span>isPositive<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// value validation + type</span>
+<span class="token class-name">propType</span><span class="token punctuation">.</span>object<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span>
+  <span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">{</span> foo<span class="token operator">:</span> isNumber<span class="token punctuation">,</span> bar<span class="token operator">:</span> <span class="token function">optional</span><span class="token punctuation">(</span>isString<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// is typed as</span>
+<span class="token punctuation">{</span>
+  foo<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  bar<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">Guide</p> <p>Read more on the <a href="/muban/guide/props.html#validate">validate Guide</a> page.</p></div> <h3 id="shape"><a href="#shape" class="header-anchor">#</a> shape</h3> <p>The <code>shape</code> helper only exists for function types, and allows you to define the shape of the
+function you expect from a parent component.</p> <div class="language-ts extra-class"><pre class="language-ts"><code>shape<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name"><span class="token builtin">Function</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token operator">...</span>obj<span class="token punctuation">,</span>
+  shapeType<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token keyword">as</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token constant">T</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>propType<span class="token punctuation">.</span>func<span class="token punctuation">.</span>shape<span class="token operator">&lt;</span><span class="token punctuation">(</span>isExpanded<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">Guide</p> <p>Read more on the <a href="/muban/guide/props.html#functions">functions Guide</a> page.</p></div> <h3 id="source"><a href="#source" class="header-anchor">#</a> source</h3> <p>The <code>source</code> helper allows you to explicitly define how and where from to extract data from your
+HTML besides the default behaviour.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token function">source</span><span class="token punctuation">(</span>options<span class="token operator">:</span> <span class="token punctuation">{</span>
+  target<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token keyword">type</span><span class="token operator">?</span><span class="token operator">:</span> <span class="token string">'data'</span> <span class="token operator">|</span> <span class="token string">'json'</span> <span class="token operator">|</span> <span class="token string">'attr'</span> <span class="token operator">|</span> <span class="token string">'css'</span> <span class="token operator">|</span> <span class="token string">'text'</span> <span class="token operator">|</span> <span class="token string">'html'</span><span class="token punctuation">;</span>
+  name<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  options<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span> 
+    cssPredicate<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li><code>target?: string</code> – The refName (those you configure as part of the component options)
+from which you want to extract this property.
+Defaults to the data-component element.</li> <li><code>type?: 'data' | 'json' | 'attr' | 'css' | 'text' | 'html'</code> - The type source you want to extract.
+Defaults to the <code>data + json + css</code> source (<code>css</code> only for boolean props).
+<ul><li><code>data</code> – Reads the <code>data-attribute</code> from your target element.</li> <li><code>json</code> – Reads the object key from a <code>&lt;script type=&quot;application/json&quot;&gt;</code> JSON block that is
+located as a first child of your target element.</li> <li><code>attr</code> - Reads the <code>attribute</code> from your target element.</li> <li><code>css</code> – When the <code>propType</code> is boolean, checks if the css class is set on the target element.
+When the <code>propType</code> is <code>string</code>, it sets the value to the first matching class on the target element
+that matches the configured <code>cssPredicate</code> option.
+When the <code>propType</code> is an <code>Array</code>, it fills it with all the classes from the target element.
+When the <code>propType</code> is set to <code>Object</code>, it creates keys for the classnames, and sets <code>true</code>
+to all values.</li> <li><code>text</code> – Reads the <code>textContents</code> from the target element.</li> <li><code>html</code> – Reads the <code>innerHTML</code> from the target element.</li></ul></li> <li><code>name?: string</code> – For the <code>data</code>, <code>json</code>, <code>attr</code> and <code>css</code> source types, by default it will use
+the
+propName for the name of the (data) attribute or class name. For situations where the name
+of the &quot;source&quot; is different from the propName you want to have in your component,
+you can set this value. For example, if you want to have 2 different props filled with
+the same <code>data-attribute</code> from different target elements.</li> <li><code>options?</code> – An options object to configure additional settings for some of the source types.
+<ul><li><code>cssPredicate?: Predicate&lt;string&gt;</code> – Sometimes you set one of a few possible css classes, and
+you want to know which one is set. When a <code>string</code> propType is used in combination with the
+<code>css</code> source, you have to provide this Predicate to search for the class name you're
+interested in.</li></ul></li></ul> <blockquote><p>TBD future?</p> <p>If you have an <code>Array</code> propType, it becomes possible to use an <code>ElementCollection</code> or
+<code>ComponentCollection</code>, and the extracted values from each element or component will be added to
+the array. Unfortunately all extracted values will be strings.</p></blockquote> <div class="custom-block tip"><p class="custom-block-title">Guide</p> <p>Read more on the <a href="/muban/guide/props.html#source">source Guide</a> page.</p></div> <h4 id="default-data-attribute"><a href="#default-data-attribute" class="header-anchor">#</a> Default <code>data-attribute</code></h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// by default, read the data-attribute from the data-component element</span>
+    isActive<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">boolean</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-is-active</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-active</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-isActive</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="default-fallback-to-script-type-application-json"><a href="#default-fallback-to-script-type-application-json" class="header-anchor">#</a> Default fallback to <code>&lt;script type=&quot;application/json&quot;&gt;</code></h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// if no data-attribute exits, fallback to the &lt;script type=&quot;application/json&quot;&gt; tag</span>
+    isActive<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">boolean</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>application/json<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token punctuation">{</span> <span class="token string">&quot;isActive&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  Content
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="fallback-to-css-for-boolean-props"><a href="#fallback-to-css-for-boolean-props" class="header-anchor">#</a> Fallback to <code>css</code> for <code>boolean</code> props</h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// if no data-attribute or JSON exits, fallback to `css` source</span>
+    <span class="token comment">// this only works for boolean props</span>
+    isActive<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">boolean</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>is-active<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>isActive<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="use-css-on-a-different-element"><a href="#use-css-on-a-different-element" class="header-anchor">#</a> Use <code>css</code> on a different element</h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  refs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// this is needed for the source-target</span>
+    content<span class="token operator">:</span> <span class="token string">'content'</span><span class="token punctuation">,</span>
+    contentMore<span class="token operator">:</span> <span class="token string">'content-more'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// instead of the data-component element, use the content ref</span>
+    <span class="token comment">// to get the property value from</span>
+    isExpanded<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">boolean</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'content'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// if your propName is different from the source name, you should specify it</span>
+    isMoreExpanded<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">boolean</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'content'</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'is-expanded'</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>is-expanded<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>is-expanded<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>content-more<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>More Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="use-the-string-array-and-object-types-for-css"><a href="#use-the-string-array-and-object-types-for-css" class="header-anchor">#</a> Use the <code>string</code>, <code>Array</code> and <code>Object</code> types for <code>css</code></h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  refs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// this is needed for the source-target</span>
+    item1<span class="token operator">:</span> <span class="token string">'item1'</span><span class="token punctuation">,</span>
+    item2<span class="token operator">:</span> <span class="token string">'item2'</span><span class="token punctuation">,</span>
+    item3<span class="token operator">:</span> <span class="token string">'item3'</span><span class="token punctuation">,</span>
+    items<span class="token operator">:</span> <span class="token function">refCollection</span><span class="token punctuation">(</span>parent <span class="token operator">=&gt;</span> parent<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.item'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// set to 'recipe'</span>
+    item1Type<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      target<span class="token operator">:</span> <span class="token string">'item1'</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'css'</span><span class="token punctuation">,</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span> cssPredicate<span class="token operator">:</span> <span class="token function">either</span><span class="token punctuation">(</span><span class="token string">'recipe'</span><span class="token punctuation">,</span> <span class="token string">'article'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// set to 'item-recipe'</span>
+    item2Type<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      target<span class="token operator">:</span> <span class="token string">'item2'</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'css'</span><span class="token punctuation">,</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span> cssPredicate<span class="token operator">:</span> <span class="token function">either</span><span class="token punctuation">(</span><span class="token string">'item-recipe'</span><span class="token punctuation">,</span> <span class="token string">'item-article'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// set to 'item-recipe'</span>
+    item2Type<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      target<span class="token operator">:</span> <span class="token string">'item2'</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'css'</span><span class="token punctuation">,</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span> cssPredicate<span class="token operator">:</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^item-</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// get all classNames from a single element</span>
+    <span class="token comment">// set to either ['item', 'item-recipe']</span>
+    itemTypes<span class="token operator">:</span> propType<span class="token punctuation">.</span>array<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      target<span class="token operator">:</span> <span class="token string">'item2'</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'css'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// combine enum classes from a collection</span>
+    <span class="token comment">// set to ['item-recipe', 'item-article']</span>
+    <span class="token comment">// TODO: currently not supported</span>
+    <span class="token comment">// itemTypes: propType.array.source({</span>
+    <span class="token comment">//   target: 'items',</span>
+    <span class="token comment">//   type: 'css',</span>
+    <span class="token comment">//   options: { cssPredicate: test(/^item-/) }</span>
+    <span class="token comment">// }),</span>
+    <span class="token comment">// get all classNames from a single element</span>
+    <span class="token comment">// set to { item: true, 'item-recipe': true } </span>
+    itemTypes<span class="token operator">:</span> propType<span class="token punctuation">.</span>object<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      target<span class="token operator">:</span> <span class="token string">'items1'</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'css'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item1<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>recipe<span class="token punctuation">&quot;</span></span> <span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item2<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item item-recipe<span class="token punctuation">&quot;</span></span> <span class="token punctuation">&gt;</span></span>More Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item3<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item item-article<span class="token punctuation">&quot;</span></span> <span class="token punctuation">&gt;</span></span>More Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="use-attr"><a href="#use-attr" class="header-anchor">#</a> Use <code>attr</code></h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  refs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// this is needed for the source-target</span>
+    contentImage<span class="token operator">:</span> <span class="token string">'content-image'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// grab the `src` attribute from the `contentImage` ref.</span>
+    contentImageSource<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'contentImage'</span><span class="token punctuation">,</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'attr'</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">'src'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// without a `name` it will use the propName (`src` in this case)</span>
+    src<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'contentImage'</span><span class="token punctuation">,</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'attr'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>content-image<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./image.jpg<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="use-text-and-html"><a href="#use-text-and-html" class="header-anchor">#</a> Use <code>text</code> and <code>html</code></h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+  refs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// this is needed for the source-target</span>
+    content<span class="token operator">:</span> <span class="token string">'content'</span><span class="token punctuation">,</span>
+    status<span class="token operator">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// get the innerHTML from the content ref </span>
+    <span class="token comment">// outputs &quot;This &lt;strong&gt;is&lt;/strong&gt; some &lt;u&gt;Content&lt;/u&gt;&quot;</span>
+    content<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'content'</span><span class="token punctuation">,</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'html'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// get the textContents from the status ref</span>
+    <span class="token comment">// outputs &quot;This is some Content&quot;</span>
+    textContent<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'text'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// outputs &quot;Success&quot;</span>
+    status<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">string</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'text'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">// conversions to Booleans, Numbers and Dates also works</span>
+    <span class="token comment">// outputs &quot;12.45&quot; (as a number)</span>
+    status<span class="token operator">:</span> propType<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'text'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    This <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>is<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> some <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">&gt;</span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>status<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">data-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>value<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>12.45<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/muban/api/component.html" class="prev">
+        Component
+      </a></span> <span class="next"><a href="/muban/api/refs.html">
+        Refs
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/muban/assets/js/app.38f7e87e.js" defer></script><script src="/muban/assets/js/2.06b0796c.js" defer></script><script src="/muban/assets/js/14.d537f9b0.js" defer></script>
+  </body>
+</html>

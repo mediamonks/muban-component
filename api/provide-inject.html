@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Provide / Inject | Muban</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Writing components for server-rendered HTML">
+    
+    <link rel="preload" href="/muban/assets/css/0.styles.c2e1c844.css" as="style"><link rel="preload" href="/muban/assets/js/app.38f7e87e.js" as="script"><link rel="preload" href="/muban/assets/js/2.06b0796c.js" as="script"><link rel="preload" href="/muban/assets/js/15.3a8681eb.js" as="script"><link rel="prefetch" href="/muban/assets/js/10.d14ed3da.js"><link rel="prefetch" href="/muban/assets/js/11.8c7bde9f.js"><link rel="prefetch" href="/muban/assets/js/12.61d44a32.js"><link rel="prefetch" href="/muban/assets/js/13.8dd5cf62.js"><link rel="prefetch" href="/muban/assets/js/14.d537f9b0.js"><link rel="prefetch" href="/muban/assets/js/16.b9200e8e.js"><link rel="prefetch" href="/muban/assets/js/17.1d86e250.js"><link rel="prefetch" href="/muban/assets/js/18.68ff74e2.js"><link rel="prefetch" href="/muban/assets/js/19.b096606a.js"><link rel="prefetch" href="/muban/assets/js/20.cf32d357.js"><link rel="prefetch" href="/muban/assets/js/21.f0e8db43.js"><link rel="prefetch" href="/muban/assets/js/22.ed59f86b.js"><link rel="prefetch" href="/muban/assets/js/23.a30f80b7.js"><link rel="prefetch" href="/muban/assets/js/24.a03bc3dc.js"><link rel="prefetch" href="/muban/assets/js/25.0c065775.js"><link rel="prefetch" href="/muban/assets/js/26.87f27203.js"><link rel="prefetch" href="/muban/assets/js/27.96e8a80c.js"><link rel="prefetch" href="/muban/assets/js/28.2639b294.js"><link rel="prefetch" href="/muban/assets/js/29.dff7791a.js"><link rel="prefetch" href="/muban/assets/js/3.deed82c5.js"><link rel="prefetch" href="/muban/assets/js/30.373e9c86.js"><link rel="prefetch" href="/muban/assets/js/31.33ef1212.js"><link rel="prefetch" href="/muban/assets/js/4.f26baa3d.js"><link rel="prefetch" href="/muban/assets/js/5.05f07280.js"><link rel="prefetch" href="/muban/assets/js/6.b1f6c096.js"><link rel="prefetch" href="/muban/assets/js/7.c1317075.js"><link rel="prefetch" href="/muban/assets/js/8.9814c2a1.js"><link rel="prefetch" href="/muban/assets/js/9.242aa778.js">
+    <link rel="stylesheet" href="/muban/assets/css/0.styles.c2e1c844.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/muban/" class="home-link router-link-active"><!----> <span class="site-name">Muban</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link router-link-active">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link router-link-active">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/muban/api/" aria-current="page" class="sidebar-link">Api</a></li><li><a href="/muban/api/app.html" class="sidebar-link">App</a></li><li><a href="/muban/api/component.html" class="sidebar-link">Component</a></li><li><a href="/muban/api/props.html" class="sidebar-link">Props</a></li><li><a href="/muban/api/refs.html" class="sidebar-link">Refs</a></li><li><a href="/muban/api/bindings.html" class="sidebar-link">Bindings</a></li><li><a href="/muban/api/hooks.html" class="sidebar-link">Hooks</a></li><li><a href="/muban/api/provide-inject.html" aria-current="page" class="active sidebar-link">Provide / Inject</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/muban/api/provide-inject.html#provide" class="sidebar-link">Provide</a></li><li class="sidebar-sub-header"><a href="/muban/api/provide-inject.html#inject" class="sidebar-link">Inject</a></li><li class="sidebar-sub-header"><a href="/muban/api/provide-inject.html#createcontext" class="sidebar-link">createContext</a></li></ul></li><li><a href="/muban/api/mhtml.html" class="sidebar-link">mhtml templates</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="provide-inject"><a href="#provide-inject" class="header-anchor">#</a> Provide / Inject</h1> <p>The <code>provide</code> and <code>inject</code> APIs allow you to pass information from parents to child outside of the
+normal component APIs, and works on any deeply nested child component instead of only on direct
+children.</p> <p>It's highly inspired by the <a href="https://v3.vuejs.org/guide/composition-api-provide-inject.html#scenario-background" target="_blank" rel="noopener noreferrer">provide / inject in the new Vue Composition API<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
+with some additional utils, so please read up their documentation first!.</p> <h2 id="provide"><a href="#provide" class="header-anchor">#</a> Provide</h2> <p>Provides a value to any child component.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">provide</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>key<span class="token operator">:</span> InjectionKey<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token builtin">string</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>Example</strong></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> location <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">'here'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">provide</span><span class="token punctuation">(</span><span class="token string">'location'</span><span class="token punctuation">,</span> location<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="inject"><a href="#inject" class="header-anchor">#</a> Inject</h2> <p>Injects a provided value from the parent into a child component.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// no default value</span>
+<span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">inject</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>
+  key<span class="token operator">:</span> InjectionKey<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token builtin">string</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+
+<span class="token comment">// default value</span>
+<span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">inject</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>
+  key<span class="token operator">:</span> InjectionKey<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  defaultValue<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span>
+  treatDefaultAsFactory<span class="token operator">?</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+
+<span class="token comment">// factory function generates default value</span>
+<span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">inject</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>
+  key<span class="token operator">:</span> InjectionKey<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  defaultValue<span class="token operator">:</span> <span class="token constant">T</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  treatDefaultAsFactory<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>Example</strong></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> location <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span><span class="token string">'location'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// location.value contains 'here'</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="createcontext"><a href="#createcontext" class="header-anchor">#</a> createContext</h2> <p>A helper function to create a typed provide/inject pair sharing the same key.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>key<span class="token operator">:</span> InjectionKey<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token operator">|</span> <span class="token builtin">string</span><span class="token punctuation">,</span> defaultValue<span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token function-variable function">provideContext</span><span class="token operator">:</span> <span class="token punctuation">(</span>value<span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">,</span>
+  useContext<span class="token operator">:</span> <span class="token punctuation">(</span>defaultValue<span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token punctuation">,</span> treatDefaultAsFactory<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">T</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>Example</strong></p> <div class="language-ts extra-class"><pre class="language-ts"><code>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>provideLocation<span class="token punctuation">,</span> useLocation<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token string">'location'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// parent</span>
+<span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> location <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">'here'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">provideLocation</span><span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// child</span>
+<span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> location <span class="token operator">=</span> <span class="token function">useLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// typed as string</span>
+    <span class="token comment">// location.value contains 'here'</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/muban/api/hooks.html" class="prev">
+        Hooks
+      </a></span> <span class="next"><a href="/muban/api/mhtml.html">
+        mhtml templates
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/muban/assets/js/app.38f7e87e.js" defer></script><script src="/muban/assets/js/2.06b0796c.js" defer></script><script src="/muban/assets/js/15.3a8681eb.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dynamic Templates | Muban</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Writing components for server-rendered HTML">
+    
+    <link rel="preload" href="/muban/assets/css/0.styles.c2e1c844.css" as="style"><link rel="preload" href="/muban/assets/js/app.38f7e87e.js" as="script"><link rel="preload" href="/muban/assets/js/2.06b0796c.js" as="script"><link rel="preload" href="/muban/assets/js/26.87f27203.js" as="script"><link rel="prefetch" href="/muban/assets/js/10.d14ed3da.js"><link rel="prefetch" href="/muban/assets/js/11.8c7bde9f.js"><link rel="prefetch" href="/muban/assets/js/12.61d44a32.js"><link rel="prefetch" href="/muban/assets/js/13.8dd5cf62.js"><link rel="prefetch" href="/muban/assets/js/14.d537f9b0.js"><link rel="prefetch" href="/muban/assets/js/15.3a8681eb.js"><link rel="prefetch" href="/muban/assets/js/16.b9200e8e.js"><link rel="prefetch" href="/muban/assets/js/17.1d86e250.js"><link rel="prefetch" href="/muban/assets/js/18.68ff74e2.js"><link rel="prefetch" href="/muban/assets/js/19.b096606a.js"><link rel="prefetch" href="/muban/assets/js/20.cf32d357.js"><link rel="prefetch" href="/muban/assets/js/21.f0e8db43.js"><link rel="prefetch" href="/muban/assets/js/22.ed59f86b.js"><link rel="prefetch" href="/muban/assets/js/23.a30f80b7.js"><link rel="prefetch" href="/muban/assets/js/24.a03bc3dc.js"><link rel="prefetch" href="/muban/assets/js/25.0c065775.js"><link rel="prefetch" href="/muban/assets/js/27.96e8a80c.js"><link rel="prefetch" href="/muban/assets/js/28.2639b294.js"><link rel="prefetch" href="/muban/assets/js/29.dff7791a.js"><link rel="prefetch" href="/muban/assets/js/3.deed82c5.js"><link rel="prefetch" href="/muban/assets/js/30.373e9c86.js"><link rel="prefetch" href="/muban/assets/js/31.33ef1212.js"><link rel="prefetch" href="/muban/assets/js/4.f26baa3d.js"><link rel="prefetch" href="/muban/assets/js/5.05f07280.js"><link rel="prefetch" href="/muban/assets/js/6.b1f6c096.js"><link rel="prefetch" href="/muban/assets/js/7.c1317075.js"><link rel="prefetch" href="/muban/assets/js/8.9814c2a1.js"><link rel="prefetch" href="/muban/assets/js/9.242aa778.js">
+    <link rel="stylesheet" href="/muban/assets/css/0.styles.c2e1c844.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/muban/" class="home-link router-link-active"><!----> <span class="site-name">Muban</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link router-link-active">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/muban/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/muban/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/muban/api/" class="nav-link">
+  Api
+</a></div><div class="nav-item"><a href="/muban/changelog/" class="nav-link">
+  Changelog
+</a></div><div class="nav-item"><a href="/muban/research/" class="nav-link router-link-active">
+  Research
+</a></div> <a href="https://github.com/mubanjs/muban" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/muban/research/" aria-current="page" class="sidebar-link">Research</a></li><li><a href="/muban/research/lifecycle.html" class="sidebar-link">Lifecycle</a></li><li><a href="/muban/research/component-props.html" class="sidebar-link">Component Props</a></li><li><a href="/muban/research/component-refs.html" class="sidebar-link">Component Refs</a></li><li><a href="/muban/research/component-dynamic-templates.html" aria-current="page" class="active sidebar-link">Dynamic Templates</a></li><li><a href="/muban/research/reactivity.html" class="sidebar-link">Exploring reactivity</a></li><li><a href="/muban/research/pure-rendering.html" class="sidebar-link">Pure rendering</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dynamic-templates"><a href="#dynamic-templates" class="header-anchor">#</a> Dynamic Templates</h1> <p></p><div class="table-of-contents"><ul></ul></div><p></p> <p>This document explores how to render templates dynamically from within the component based on
+received data or user input.</p> <p>In muban, ideally all HTML is rendered on the server, where muban components will just make things
+interactive. This means that rendering HTML from JS is not the core part of muban.</p> <p>However, there are cases where we want to &quot;render&quot; something from JS:</p> <ul><li>When having a list of tiles, and we want to change the sorting or do local filtering, we need
+to take those existing items, and (conditionally) hide them or move them around.</li> <li>When having a list of tiles, and we have a &quot;load more&quot; button to load more content, and the API
+returns structured JSON data instead of plain HTML, we need to use that to render more items.</li> <li>Or a combination of the above, when sorting/filtering happens in the API, and we received back
+structured data.</li> <li>When searching, and we receive the results as structured data from the API.</li></ul> <p>There are a few different (technical) scenarios related to the above, so let's explore them:</p> <ol><li><p>In most cases, the templates that we need to render on the client, are also used to render those
+same items from the CMS. (e.g. load more) In other cases, some tiles are client-only. It's
+best to treat those templates exactly the same, and don't have a different syntax or mechanism
+to render each use case.</p> <p>Something to always keep in mind is that when rendering templates from
+the client, they should always be kept up-to-date with the CMS templates.</p></li> <li><p>In some cases (like with client side filtering/sorting), the DOM elements already exist with the
+right data, so we don't <em>need</em> to render them again, just hide/move them in the DOM. However, to
+execute any client side logic on those items, we need to extract the data first, which leaves
+us in the same place as the API use case - structured data that needs to be rendered (again).</p> <p>If we have a solid way of extracting all data from those items as a separate step, we can then
+continue from there the same way as the API use case.</p></li></ol> <p>So, what do we actually need to render dynamic templates from within a component?</p> <ul><li>We need to have data, and know when it changes - so it should be defined as a binding, linked to
+an observable object</li> <li>We need to have a container where to render it in.</li> <li>If we go based on data, we have no way to make &quot;append&quot; mode work</li> <li>We need a template to render
+<ul><li>This template can be a single item/component we pass data to</li> <li>Or it can be for a list, and contains the loop and wrapping logic to render multiple items</li></ul></li></ul> <p>Potential solutions could look like:</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token comment">// item template</span>
+<span class="token keyword">type</span> <span class="token class-name">ItemTemplateProps</span> <span class="token operator">=</span> <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">itemTemplate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> title <span class="token punctuation">}</span><span class="token operator">:</span> ItemTemplateProps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div&gt;
+    &lt;p&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>title<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/p&gt;
+  &lt;/div&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// list template</span>
+
+<span class="token keyword">type</span> <span class="token class-name">ListTemplateProps</span> <span class="token operator">=</span> <span class="token punctuation">{</span> items<span class="token operator">:</span> <span class="token builtin">Array</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ItemTemplateProps</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text"> };
+const listTemplate = ({ items = [] }: ListTemplateProps = {}) =&gt; </span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div&gt;
+    &lt;ul&gt;
+      </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>items<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>item <span class="token operator">=&gt;</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">itemTemplate</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+    &lt;ul&gt;
+  &lt;/div&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token plain-text">;
+
+// store the items to render
+const items = reactive([]);
+
+// config to extract the data from the already rendered HTML
+const extractOptions = </span><span class="token punctuation">{</span>
+  config<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// when extracted, add the data to the items array</span>
+  <span class="token function-variable function">onData</span><span class="token operator">:</span> <span class="token parameter">data</span> <span class="token operator">=&gt;</span> items<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token plain-text">
+
+// set up dynamic template rendering
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>refs.listContainer</span> <span class="token attr-name">extract</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>extractOptions<span class="token punctuation">}</span></span> <span class="token attr-name">data</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> items <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">template</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>listTemplate<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+// or
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Template</span></span> <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>refs<span class="token punctuation">.</span>listContainer<span class="token punctuation">}</span></span> <span class="token attr-name">extract</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>extractOptions<span class="token punctuation">}</span></span> <span class="token attr-name">data</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> items <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">template</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>listTemplate<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+
+</span></code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/muban/research/component-refs.html" class="prev">
+        Component Refs
+      </a></span> <span class="next"><a href="/muban/research/reactivity.html">
+        Exploring reactivity
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/muban/assets/js/app.38f7e87e.js" defer></script><script src="/muban/assets/js/2.06b0796c.js" defer></script><script src="/muban/assets/js/26.87f27203.js" defer></script>
+  </body>
+</html>
